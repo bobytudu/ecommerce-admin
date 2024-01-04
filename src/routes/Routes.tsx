@@ -6,7 +6,8 @@ import { firebaseAuth } from "services/firebase";
 import PrivateRouter from "./PrivateRouter";
 import { useAppSelector } from "redux/hooks";
 import { setUser, stopLoading } from "redux/reducers/auth.reducer";
-// import Loader from "components/Loader";
+import AlertComponent from "components/common/Alert";
+import Loader from "components/common/Loader";
 
 export default function Routes() {
   const dispatch = useDispatch();
@@ -40,6 +41,8 @@ export default function Routes() {
 
   return (
     <div>
+      <AlertComponent />
+      <Loader />
       <PrivateRouter />
       {/* {auth.loading && <Loader loading />}
       {auth.user && !auth.loading && <PrivateRouter />}
