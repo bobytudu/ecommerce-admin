@@ -17,12 +17,12 @@ ThemeProvider.propTypes = {
   children: PropTypes.node
 }
 
-interface ThemeOptionTypes {
-  palette: PaletteType
-  shape: { borderRadius: number }
-  typography: any
-  shadows: any
-  customShadows: any
+export interface ThemeOptionTypes {
+  palette: PaletteType;
+  shape: { borderRadius: number };
+  typography: any;
+  shadows: any;
+  customShadows: any;
 }
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
